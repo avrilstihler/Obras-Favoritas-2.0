@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 18,
       title: "Alicia - Expedition 33 OST",
       description:
-      "'Alicia' é uma das faixas mais emocionantes da trilha sonora do RPG Clair Obscur: Expedition 33. A música é interpretada por vocais etéreos que evocam sentimentos profundos de perda e esperança. A canção é acompanhada por arranjos orquestrais delicados, incluindo violino e violoncelo. A letra é cantada em uma língua fictícia que adiciona uma camada de misticismo à peça.",
+      "'Alicia' é uma das faixas mais emocionantes da trilha sonora do RPG Clair Obscur: Expedition 33. A música é interpretada por vocais etéreos que evocam sentimentos profundos de perda e esperança. A canção é acompanhada por arranjos orquestrais delicados, incluindo violino e violoncelo.",
       image: "alicia.jpg", 
       alt: "Capa do álbum qp de Ichiko Aoba",
       tag: "RPG, fantasia, trilha sonora, orquestral, vocal",
