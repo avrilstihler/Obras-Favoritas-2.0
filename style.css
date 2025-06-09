@@ -1,0 +1,144 @@
+/* Definindo variáveis CSS com base na configuração do Tailwind para uso no CSS customizado, se necessário.
+   Tailwind já faz isso internamente para suas classes, mas pode ser útil para consistência.
+   Normalmente, você usaria as classes do Tailwind diretamente. */
+:root {
+    --font-family-inter: 'Inter', sans-serif;
+    --color-brand-primary: #4f46e5;
+    --color-brand-primary-hover: #4338ca;
+    --color-brand-secondary: #e0e7ff;
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #4b5563;
+}
+
+body {
+    font-family: var(--font-family-inter);
+    /* O gradiente e a cor do texto principal já são definidos pelas classes Tailwind no body */
+}
+
+/* Estilos para os botões das abas */
+.tab-button {
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 1rem; /* Ajuste fino do padding */
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: var(--color-text-secondary);
+    background-color: transparent;
+    border: 2px solid transparent; /* Para evitar "pulo" no hover/active */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+@media (min-width: 640px) { /* sm:mb-0 */
+    .tab-button {
+        margin-bottom: 0;
+    }
+}
+
+.tab-button:hover {
+    background-color: var(--color-brand-secondary);
+    color: var(--color-brand-primary);
+}
+
+.tab-button.active-tab {
+    background-color: var(--color-brand-primary);
+    color: white;
+    box-shadow: 0 4px 10px -2px rgba(79, 70, 229, 0.4); /* Sombra mais suave e colorida */
+    border-color: var(--color-brand-primary);
+}
+
+.tab-button svg {
+    margin-right: 0.5rem;
+    width: 1.125rem; /* Ajuste do tamanho do ícone */
+    height: 1.125rem;
+    stroke-width: 2; /* Garantir que o stroke-width seja consistente */
+}
+
+/* Estilos para os cards de mídia */
+.media-card {
+    background-color: white;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Sombra mais sutil */
+    overflow: hidden;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    display: flex; /* Para melhor controle do conteúdo interno */
+    flex-direction: column;
+}
+
+.media-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+.media-card img {
+    width: 100%;
+    height: 35rem; /* h-56, um pouco maior */
+    object-fit: cover;
+}
+
+.media-card .card-content {
+    padding: 1.25rem; /* p-5 */
+    flex-grow: 1; /* Faz o conteúdo preencher o espaço se o card tiver altura fixa ou em flexbox */
+    display: flex;
+    flex-direction: column;
+}
+
+.media-card .card-title {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 700; /* font-bold */
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.media-card .card-description {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.4; /* Melhor legibilidade */
+    margin-bottom: 0.75rem; /* mb-3 */
+    flex-grow: 1; /* Descrição ocupa espaço disponível */
+}
+
+.media-card .card-category-tag {
+    display: inline-block;
+    background-color: var(--color-brand-secondary);
+    color: var(--color-brand-primary);
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 600; /* font-semibold */
+    padding: 0.25rem 0.75rem; /* py-1 px-3 */
+    border-radius: 9999px;
+    margin-top: auto; /* Alinha a tag no final do card-content se houver espaço */
+    align-self: flex-start; /* Garante que não estique se houver outras tags */
+}
+
+.media-card .card-extra-tags {
+    margin-top: 0.5rem; /* mt-2 */
+    font-size: 0.75rem; /* text-xs */
+    color: #9ca3af; /* text-gray-400 */
+    font-style: italic;
+}
+
+/* Seção Sobre */
+.about-section {
+    max-width: 48rem; /* max-w-3xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem; /* p-8 */
+    background-color: white;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+.about-section h2 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 800; /* font-extrabold */
+    color: var(--color-text-primary);
+    margin-bottom: 2rem; /* mb-8 */
+    text-align: center;
+}
+.about-section p {
+    font-size: 1rem; /* text-base */
+    color: var(--color-text-secondary);
+    line-height: 1.75; /* leading-relaxed */
+    margin-bottom: 1.5rem; /* mb-6 */
+}

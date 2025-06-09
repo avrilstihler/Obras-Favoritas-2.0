@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Obras Favoritas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Seu CSS customizado -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Configuração do Tailwind (opcional, mas útil para consistência) -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                inter: ['Inter', 'sans-serif'],
+              },
+              colors: {
+                brand: { // Cores personalizadas da "marca"
+                    primary: '#4f46e5', // indigo-600
+                    primaryHover: '#4338ca', // indigo-700
+                    secondary: '#e0e7ff', // indigo-100
+                    textPrimary: '#1f2937', // gray-800
+                    textSecondary: '#4b5563', // gray-600
+                    background: '#f0f5ff', // indigo-50
+                    accent: '#f3e8ff', // purple-100
+                },
+              }
+            }
+          }
+        }
+      </script>
+      <!-- Fonte Inter -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-brand-background to-brand-accent font-inter text-brand-textPrimary">
+
+    <!-- Cabeçalho do site -->
+    <header class="bg-white shadow-sm py-6 px-4 sm:px-6 lg:px-8 rounded-b-xl sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
+            <h1 class="text-4xl font-extrabold text-brand-primary mb-4 sm:mb-0">
+                Minhas Obras Favoritas
+            </h1>
+            <!-- Navegação por abas -->
+            <nav id="tabs-nav" class="flex space-x-1 sm:space-x-2 flex-wrap justify-center sm:justify-start">
+                <button data-tab="filmes" class="tab-button">
+                    <!-- Film Icon SVG will be injected by JS -->
+                    Filmes
+                </button>
+                <button data-tab="seriesAnimes" class="tab-button">
+                    <!-- Tv Icon SVG will be injected by JS -->
+                    Séries & Animes
+                </button>
+                <button data-tab="livros" class="tab-button">
+                    <!-- Book Icon SVG will be injected by JS -->
+                    Livros
+                </button>
+                <button data-tab="jogos" class="tab-button">
+                    <!-- Gamepad Icon SVG will be injected by JS -->
+                    Jogos
+                </button>
+                <button data-tab="musicas" class="tab-button">
+                    <!-- Music Icon SVG will be injected by JS -->
+                    Músicas
+                </button>
+                <button data-tab="sobre" class="tab-button">
+                    <!-- Info Icon SVG will be injected by JS -->
+                    Sobre
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main id="main-content" class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <!-- O conteúdo será carregado aqui pelo JavaScript -->
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer class="bg-white shadow-inner py-6 px-4 sm:px-6 lg:px-8 mt-12 rounded-t-xl">
+        <div class="max-w-7xl mx-auto text-center text-brand-textSecondary text-sm">
+            © <span id="current-year"></span> Minhas Obras Favoritas. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
